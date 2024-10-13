@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <style>
+            *{
+                margin: 0;
+                
+            }
+            
+            #container{
+                display: flex;
+                justify-content: space-evenly;
+                background-color: rgb(236, 201, 180);
+                box-shadow: 0 0 10px black ;
+                
+                
+            }
+            #container h1{
+               padding-top: 20px;
+               font-family :"Poppins", system-ui ;
+               margin-right: 150px;
+               color: grey;
+            }
+            #container h1:hover{
+             color: black;
+            }
+            nav{
+                display: flex;
+                
+            }
+            nav a{
+              text-decoration: none;
+               margin: 30px;
+               color: grey;
+               font-family :"Poppins", system-ui ;
+               font-weight: bold;
+            }
+            nav a:hover{
+              color: black;
+            }
+            #icons i{
+                margin: 30px;
+                font-size: 30px;
+                color: grey;
+            }
+            #icons i:hover{
+               color:black
+            }
+            #btn{
+                margin-top: 30px;
+                height: 30px;
+                width:100px;
+                color: white;
+                background-color: grey;
+                border-color: antiquewhite;
+                border-radius: 20px;
+            }
+         
+           
+           img{
+            width: 100%;
+            height: 600px;
+            margin-top: 100px;
+            padding: 0; 
+            
+           }
+
+           #main{
+            margin-top: 20px;
+            width: 100%;
+            height: 900px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color:rgba(201, 201, 201, 0.421) ;
+             padding-top: 50px;
+             padding-bottom: 100px;
+            
+          
+            
+           
+           }
+           #left{
+            width: 60%;
+            height: 650px;
+            font-family :"Poppins", system-ui ;
+            background:  linear-gradient(rgba(0, 0, 0, 0.417),rgba(0, 0, 0, 0.472),rgba(0, 0, 0, 0.472)), 
+            url("https://www.techprevue.com/wp-content/uploads/2016/09/fashion-online-shopping-sites.jpg") ;
+            font-size: 30px;
+            text-align: center;
+            text-shadow: 0 0 10px black;
+            color: white;
+            padding-top: 250px;
+           }
+           #left button{
+            font-size: 15px;
+         
+            background: none;
+            color: aliceblue;
+            border: 1px solid white;
+            width: 100px;
+           }
+           #right{
+            width: 30%;
+            height: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+           
+           }
+           #top{
+            height: 350px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.466),rgba(0, 0, 0, 0.564)),url("https://tse3.mm.bing.net/th?id=OIP.ALiLY0uKDsm5AL8ZfiUolgHaEK&pid=Api&P=0&h=180");
+            background-size: cover;
+            font-family :"Poppins", system-ui ;
+            text-align: center;
+            padding-top: 100px;
+            text-shadow: 0 0 20px black;
+            color: white;
+             
+           }
+           #bottom{
+            height: 350px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.321),rgba(0, 0, 0, 0.419)),url("https://tse1.mm.bing.net/th?id=OIP.HSqCf3yf2VusDAawMmS0egHaFF&pid=Api&P=0&h=180");
+            background-size: cover;
+            font-family :"Poppins", system-ui ;
+            text-align: center;
+            padding-top: 100px;
+            text-shadow: 0 0 10px black;
+            color: white;
+            
+           }
+           #top button{
+            background-color: yellow;
+            border: none;
+            height: 30px;
+            margin-top: 20px;
+           }
+           #bottom button{
+            background-color: yellow;
+            border: none;
+            height: 30px;
+            margin-top: 20px;
+           }
+
+           #lines{
+            display: flex;
+            justify-content: space-around ;
+            margin-top: 70px;
+            margin-bottom: 70px;
+           }
+           .line1{
+                     border: 0;
+                  height: 1px;
+                    width: 30%;
+                      background: black;
+                          
+                       }
+
+           .line2{
+            border: 0;
+                  height: 1px;
+                    width: 30%;
+                      background: black;
+           } 
+           #lines h3{
+            font-size: 30px;
+            
+           }
+           #info{
+            display: flex;
+            justify-content: space-around;
+            background-color:rgba(201, 201, 201, 0.421) ;
+            
+            padding-top: 50px;
+            padding-bottom: 50px;
+           }  
+           #info div{
+            width: 15%;
+            background-color: white;
+            padding-left: 70px;
+            padding-top: 30px;
+            height: 100px;
+            display: flex;
+            gap: 15px;
+            box-shadow: 0 0 2px grey ;
+            
+           }  
+           #info h3{
+            font-size:21px ;
+           }  
+           #info i{
+            font-size: 35px;
+            color: yellow;
+           }
+           
+           #categories{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            
+            font-family :"Poppins", system-ui ;
+            background-color: rgba(201, 201, 201, 0.421) ;
+            padding-bottom: 200px;
+           }
+           #portion{
+            width:20%;
+            height: 150px;
+            border: 1px solid white;
+            margin-top :20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            gap: 80px;
+            background-color: white;
+           
+        
+           }
+           #side1{
+            
+            width: 20%;
+            height: 150px;
+           
+           
+
+           }
+           #side1 img{
+             
+          margin-top: 0;
+          width:100px;
+          height: 150px;
+           }
+           #side2{
+            margin-top: 50px;
+           }
+           #heading2{
+            padding-top: 100px;
+            margin-top: 20px;
+            padding-left: 80px;
+            font-family :"Poppins", system-ui ;
+            background-color: rgba(201, 201, 201, 0.421) ;
+
+            
+           }
+           #products{
+            display: flex;
+            justify-content: space-around;
+            overflow: hidden;
+            font-family :"Poppins", system-ui ;
+            background-color: rgba(201, 201, 201, 0.421) ;
+
+           
+
+           }
+           #products div{
+            width: 20%;
+            height: 400px;
+            border: 1px solid black;
+            text-align: center;
+            
+            
+            
+           }
+           #products img{
+            margin-top: 0;
+            height: 250px;
+            background-color: rgba(201, 201, 201, 0.421) ;
+
+           }
+           #products h3,h4{
+           text-align: center; 
+           margin-top: 20px; 
+
+
+           }
+           #products span{
+             text-decoration: line-through;
+             font-weight: lighter;
+             font-size: 15px;
+           }
+           #products i{
+            color: rgb(243, 225, 20);
+            
+           }
+           #feat{
+            padding-bottom: 30px;
+            font-family :"Poppins", system-ui ;
+            padding-left: 80px;
+            background-color: rgba(201, 201, 201, 0.421) ;
+
+
+           }
+           #footer{
+            display: flex;
+            height: 450px;
+            background-color: rgb(56, 52, 52);
+            justify-content: space-around;
+            font-family :"Poppins", system-ui ;
+            
+
+           }
+           #footer div{
+           width: 300px;
+            height: 300px;
+            margin-top: 100px;
+           
+            color: white;
+           
+           }
+           #footer {
+               text-align: justify;
+           }
+           #footer ul,a{
+            text-decoration: none;
+            list-style: none;
+            color: white;
+           }
+          #address i{
+            color: yellow;
+            margin-right: 10px;
+          }
+         ul li{
+            margin-bottom: 10px;
+         }
+         ul{
+            margin-top: 20px;
+            
+           
+         }
+         #footer h3{
+           padding-left: 40px;
+         }
+         #footer p{
+            padding-top: 20px;
+            padding-left: 40px;
+            padding-bottom: 10px;
+         }
+         #details i{
+            margin-right: 10px;
+         }
+         input{
+            width: 185px;
+            height: 20px;
+            margin-left: 40px;
+         }
+         #footer button{
+            height: 25px;
+            background-color: yellow;
+            border: yellow;
+         }
+         #footer h4{
+            padding-right: 120px;
+         }
+         #media i{
+            color: yellow;
+            padding-top: 20px;
+            padding-left: 40px;
+            font-size: 40px;
+            
+         }
+
+         
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+
+         function NavBar(){
+         return <div id="container">
+          <h1>PRasad's</h1>
+           <nav >
+            <a href="">Home</a>
+            <a href="">Electronics</a>
+            <a href="">Jewellery</a>
+            <a href="">Men</a>
+            <a href="">Women</a> 
+            </nav>
+            <div id="icons">
+            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-solid fa-heart"></i></a>
+            
+        </div>
+            
+        <button id="btn">logout</button>
+            
+        </div>
+    }
+    function Slide(){
+       return <div > 
+            
+            
+            
+            <img src="https://i.pinimg.com/originals/ea/5b/3c/ea5b3c3e110a03cb8dc5a6aef7589d1b.jpg" alt=""/>
+       
+            <div id="lines">
+                <hr class="line1"/>
+                <h3>Top Categories</h3>
+                <hr class="line2"/>
+                </div>
+        </div>
+
+    }
+    function Section(){
+        return <div id="main">
+            <div id="left">
+                <h2>Women Fashion</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aut eligendi natus.</p>
+                <button>Shop Now</button>
+                </div>
+            <div id="right">
+                <div id="top">
+                    <h5>SAVE 20%</h5>
+                    <h3>Special Offer</h3>
+                    <button>Shop Now</button>
+
+                    </div>
+                <div id="bottom">
+                    <h5>SAVE 20%</h5>
+                    <h3>Special Offer</h3>
+                    <button>Shop Now</button>
+                    </div>
+                </div>
+            </div>
+            
+    }
+
+    
+    function Info(){
+      return <div id="info">
+        <div>
+            <i class="fa-solid fa-check"></i>
+            <h3>Quality Product</h3>
+            </div>
+        <div>
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Free Shipping</h3>
+            </div>
+        <div>
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            <h3>14-Day Return</h3>
+            </div>
+        <div>
+            <i class="fa-solid fa-phone-volume"></i>
+            <h3>24/7 Support</h3>
+            </div>
+        
+        </div>
+    }
+    function Categories(){
+        return <div>
+            <h2 id="heading2">CATEGORIES</h2>
+             <div id="categories">
+           
+            <div id="portion">
+                <div id="side1"><img src="https://tse4.mm.bing.net/th?id=OIP.T75Q74FSa5gzbcBwxT88QwHaIo&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+            <div id="portion">
+                <div id="side1"><img src="https://tse4.mm.bing.net/th?id=OIP.PlokRBNZfm1YmkeE9Ar_IwHaIy&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+            <div id="portion">
+                <div id="side1"><img src="https://tse1.mm.bing.net/th?id=OIP.nNf_bNUPZ5J_qAiQg6sCFwHaHa&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+            <div id="portion">
+                <div id="side1"><img src="https://tse4.mm.bing.net/th?id=OIP.ztn5Vc_nV_9g8KyA0fSiZgHaGM&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+            <div id="portion">
+                <div id="side1"><img src="https://tse4.mm.bing.net/th?id=OIP.ztn5Vc_nV_9g8KyA0fSiZgHaGM&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+            <div id="portion">
+                <div id="side1"><img src="https://tse1.mm.bing.net/th?id=OIP.nNf_bNUPZ5J_qAiQg6sCFwHaHa&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+            <div id="portion">
+                <div id="side1"><img src="https://tse4.mm.bing.net/th?id=OIP.PlokRBNZfm1YmkeE9Ar_IwHaIy&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+            <div id="portion">
+                <div id="side1"><img src="https://tse4.mm.bing.net/th?id=OIP.T75Q74FSa5gzbcBwxT88QwHaIo&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+            <div id="portion">
+                <div id="side1"><img src="https://tse4.mm.bing.net/th?id=OIP.PlokRBNZfm1YmkeE9Ar_IwHaIy&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+            <div id="portion">
+                <div id="side1"><img src="https://tse4.mm.bing.net/th?id=OIP.T75Q74FSa5gzbcBwxT88QwHaIo&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+            <div id="portion">
+                <div id="side1"><img src="https://tse4.mm.bing.net/th?id=OIP.ztn5Vc_nV_9g8KyA0fSiZgHaGM&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+            <div id="portion">
+                <div id="side1"><img src="https://tse1.mm.bing.net/th?id=OIP.nNf_bNUPZ5J_qAiQg6sCFwHaHa&pid=Api&P=0&h=180" alt="" />
+                </div>
+                <div id="side2"><h4>Company Name</h4>
+                <p>100 Products</p>
+                </div>
+            </div>
+        </div>
+            
+            </div>
+    }
+  
+
+    function Products(){
+        return <div>
+            <h2 id="feat">FEATURED PRODUCTS</h2>
+        <div id="products">
+            <div >
+                <img src="https://tse4.mm.bing.net/th?id=OIP.Su9U_hlgeNx29zsmFriXKQHaE8&pid=Api&P=0&h=180" alt=""/>
+                <h4>Canon s343</h4>
+                <h3>$123 <span>$123.00</span></h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+
+                </div>
+            <div>
+                <img src="https://tse3.mm.bing.net/th?id=OIP.s9PpENzuIa1fMSynihR97wHaHa&pid=Api&P=0&h=180" alt=""/>
+                <h4>HighLander</h4>
+                <h3>$123 <span>$123.00</span></h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+
+                </div>
+            <div>
+                <img src="https://tse3.mm.bing.net/th?id=OIP.u4CI03b79bxabLmfLr0heAHaHa&pid=Api&P=0&h=180" alt=""/>
+                <h4>Table Lamp</h4>
+                <h3>$123 <span>$123.00</span></h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+               
+
+                </div>
+            <div>
+                <img src="https://tse4.mm.bing.net/th?id=OIP.sJ8IgFQT3LJLjvMZLeAi_AHaHa&pid=Api&P=0&h=180" alt=""/>
+                <h4>Van's</h4>
+                <h3>$123 <span>$123.00</span></h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+
+                </div>
+            </div>
+            </div>
+    }
+
+    function Footer(){
+        return <div id="footer">
+            <div>
+                <h3>GET IN TOUCH</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum fugit culpa beatae excepturi repellendus alias.</p>
+                <ul id="address">
+                    <li> <i class="fa-solid fa-location-dot"></i> 123Street,New York,USA</li>
+                    <li><i class="fa-solid fa-envelope"></i> inf0@example.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +001 545 6546</li>
+                    </ul>
+                </div>
+            <div>
+                <h3>QUICK SHOP</h3>
+                <ul id="details">
+                    <a href=""><li> <i class="fa-solid fa-greater-than"></i>  Home</li></a> 
+                    <a href=""><li> <i class="fa-solid fa-greater-than"></i> Our Shop</li></a>
+                 <a href=""><li> <i class="fa-solid fa-greater-than"></i> Shop Detail</li></a>
+                  <a href=""><li> <i class="fa-solid fa-greater-than"></i> Shopping Cart</li></a>
+                  <a href=""><li> <i class="fa-solid fa-greater-than"></i> Shopping Cart</li></a>
+                    <a href=""><li> <i class="fa-solid fa-greater-than"></i> Contact Us</li></a>
+                    </ul>
+                </div>
+            <div>
+                <h3>MY ACCOUNT</h3>
+                <ul id="details">
+                   <a href=""><li> <i class="fa-solid fa-greater-than"></i> Home</li></a> 
+                    <a href=""><li> <i class="fa-solid fa-greater-than"></i> Our Shop</li></a>
+                 <a href=""><li> <i class="fa-solid fa-greater-than"></i> Shop Detail</li></a>
+                  <a href=""><li> <i class="fa-solid fa-greater-than"></i> Shopping Cart</li></a>
+                  <a href=""><li> <i class="fa-solid fa-greater-than"></i> Shopping Cart</li></a>
+                    <a href=""><li> <i class="fa-solid fa-greater-than"></i> Contact Us</li></a>
+                    </ul>
+                </div>
+            <div id="media">
+                <h3>NEWSLETTER</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <input type="text" placeholder="Your Email Address"  />  <button>Sign Up</button>
+                <h4>FOLLOW US</h4>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+                </div>
+                
+            </div>
+    }
+     function App(){
+         return <div> 
+            <NavBar />
+            <Slide />
+            <Section />
+            <Info />
+           <Categories />
+           <Products />
+           <Footer />
+            </div>
+
+     }
+     ReactDOM.render(<App /> , document.getElementById("root"))
+
+        </script>
+    </body>
+</html>
